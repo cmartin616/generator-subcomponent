@@ -2,7 +2,7 @@
 define([
     'app/config',
 
-    'components/dataIssues/controller/<%= componentName%>Controller',
+    'components/<%= componentName%>/controller/<%= componentName%>Controller',
 
     'dojo/text!../templates/<%= componentName%>Template.html'
   ],

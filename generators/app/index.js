@@ -35,6 +35,17 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
 
+    // app: function () {
+    //   this.fs.copy(
+    //     this.templatePath('_package.json'),
+    //     this.destinationPath('package.json')
+    //   );
+    //   this.fs.copy(
+    //     this.templatePath('_bower.json'),
+    //     this.destinationPath('bower.json')
+    //   );
+    // },
+
     projectfiles: function () {
       this.fs.copyTpl(
         this.templatePath('View.js'),
@@ -51,10 +62,14 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath(this.componentName + '/templates/' +this.componentName+'Template.html'),
         { componentName: this.componentName }
       );
-    }
-  },
+      this.fs.copy(
+        this.templatePath('.scss'),
+        this.destinationPath('../../styles/_' + this.componentName + '.scss')
+      );
+    },
 
-  // install: function () {
-  //   this.installDependencies();
-  // }
+    // install: function () {
+    //   this.installDependencies();
+    // }
+  }
 });
