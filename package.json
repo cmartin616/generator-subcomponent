@@ -1,0 +1,29 @@
+{
+  "name": "generator-subcomponent",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "cmartin616/generator-subcomponent",
+  "author": {
+    "name": "Chris Martin",
+    "email": "",
+    "url": "https://github.com/cmartin616"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.19.0",
+    "lodash": "^3.5.0",
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
